@@ -6,10 +6,13 @@ class rbpod ($smtp_host =  '',
              $email_hostname = '',
              $monit_web_user_name = '',
              $monit_web_password = '',
+             $ssh_port = '9000',
              $rbpod_domain = '',
              $rbpod_hostname = ''){
 
     Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
     include rbpod::smtp
+    include rbpod::monitoring
+    include rbpod::tor
 }
 

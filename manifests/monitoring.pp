@@ -1,5 +1,8 @@
-class rbpod::monit inherits rbpod {
-    # Install monit
+class rbpod::monitoring inherits rbpod {
+
+    include rbpod::monitoring::tor
+
+    # Install monit using the tompurl/monit module.
     class { 'monit':
         alert_address  => $alert_address,
         smtp_host      => $smtp_host,

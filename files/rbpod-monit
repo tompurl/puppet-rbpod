@@ -1,0 +1,6 @@
+check process tor with pidfile /var/run/tor/tor.pid
+  start program = "/etc/init.d/tor start"
+  stop  program = "/etc/init.d/tor stop"
+  if mem > 32 MB for 3 cycles then restart
+  if cpu > 30% for 5 cycles then restart
+

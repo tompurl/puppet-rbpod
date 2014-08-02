@@ -9,3 +9,4 @@ project_page 'http://rbpod.tompurl.com'
 
 dependency 'akumria/nullmailer', '>= 0.0.0'
 dependency 'tompurl/monit',      '>= 0.0.0'
+dependency 'tompurl/torssh',     '>= 0.0.0'
