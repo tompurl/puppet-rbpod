@@ -1,4 +1,4 @@
-class rbpod::monit inherits monit {
+class rbpod::monit inherits rbpod {
     # Install monit
     class { 'monit':
         alert_address  => $alert_address,
