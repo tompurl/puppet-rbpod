@@ -12,9 +12,17 @@ class rbpod ($smtp_host =  '',
              $rbpod_hostname = ''){
 
     Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
+
+    # Cool trick that automatically runs apt-get update once when the package
+    # command is executed (one or more times).
+    exec { "apt-update":
+        command => "/usr/bin/apt-get update",
+    Exec["apt-update"] -> Package <| |>
+
     include rbpod::smtp
     include rbpod::monitoring
     include rbpod::tor
     include rbpod::location
+    include rbpod::enhancers
 }
 
