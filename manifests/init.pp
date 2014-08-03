@@ -9,6 +9,9 @@ class rbpod ($smtp_host =  '',
              $ssh_port = '9000',
              $rbpod_domain = '',
              $timezone = '',
+             $ssh_keypair_name = '',
+             $ssh_keypair_key = '',
+             $ssh_keypair_target_user = '',
              $rbpod_hostname = ''){
 
     Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
@@ -17,6 +20,7 @@ class rbpod ($smtp_host =  '',
     # command is executed (one or more times).
     exec { "apt-update":
         command => "/usr/bin/apt-get update",
+    }
     Exec["apt-update"] -> Package <| |>
 
     include rbpod::smtp
@@ -24,5 +28,6 @@ class rbpod ($smtp_host =  '',
     include rbpod::tor
     include rbpod::location
     include rbpod::enhancers
+    include rbpod::ssh
 }
 
