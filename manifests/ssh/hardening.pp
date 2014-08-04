@@ -9,5 +9,4 @@ class rbpod::ssh::hardening inherits rbpod::ssh {
         require => Package["openssh-server"], 
         notify  => Service["ssh"]
     }
-    # TODO install enhancers first
 }
