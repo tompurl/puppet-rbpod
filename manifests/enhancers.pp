@@ -3,6 +3,7 @@ class rbpod::enhancers inherits rbpod {
     $enhancers = [ "vim",
                    "tmux",
                    "mlocate",
+                   "libaugeas-ruby1.9.1",
                    "tcpdump",
                    "nethogs",
                    "htop"]
