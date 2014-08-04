@@ -5,7 +5,11 @@ class rbpod::enhancers inherits rbpod {
                    "mlocate",
                    "libaugeas-ruby1.9.1",
                    "tcpdump",
+                   "elinks",
                    "nethogs",
                    "htop"]
-    package { $enhancers: ensure => "latest" }
+    package { $enhancers: 
+        ensure => "latest",
+        before => Class["rbpod::ssh::hardening"],
+    }
 }
