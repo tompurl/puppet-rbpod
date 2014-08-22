@@ -12,6 +12,11 @@ class rbpod ($smtp_host =  '',
              $ssh_keypair_name = '',
              $ssh_keypair_key = '',
              $ssh_keypair_target_user = '',
+             $host_login_name = '',
+             $btsync_web_ip = '0.0.0.0',
+             $btsync_web_port = '8888',
+             $btsync_web_login = 'admin',
+             $btsync_web_password = 'password',
              $rbpod_hostname = ''){
 
     Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
@@ -29,5 +34,6 @@ class rbpod ($smtp_host =  '',
     include rbpod::location
     include rbpod::enhancers
     include rbpod::ssh
+    include rbpod::backup_software
 }
 
