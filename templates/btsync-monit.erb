@@ -1,0 +1,6 @@
+check process btsync with pidfile /var/run/btsync.<%= scope.lookupvar('rbpod::host_login_name')%>.pid
+  start program = "/etc/init.d/btsync start"
+  stop  program = "/etc/init.d/btsync stop"
+  if failed host 127.0.0.1 port <%= scope.lookupvar('rbpod::btsync_web_port')%> then restart
+  if cpu is greater than 90% for 2 cycles then alert
+  if cpu > 95% for 30 cycles then restart

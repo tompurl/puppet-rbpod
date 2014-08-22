@@ -1,6 +1,7 @@
 class rbpod::monitoring inherits rbpod {
 
     include rbpod::monitoring::tor
+    include rbpod::monitoring::btsync
 
     # Install monit using the tompurl/monit module.
     class { 'monit':
