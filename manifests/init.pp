@@ -17,6 +17,8 @@ class rbpod ($smtp_host =  '',
              $btsync_web_port = '8888',
              $btsync_web_login = 'admin',
              $btsync_web_password = 'password',
+             # This breaks a Vagrant VM if it's true 
+             $harden_sudo = 'true',
              $rbpod_hostname = ''){
 
     Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
@@ -35,5 +37,7 @@ class rbpod ($smtp_host =  '',
     include rbpod::enhancers
     include rbpod::ssh
     include rbpod::backup_software
+    include rbpod::sudo
+    include rbpod::updates
 }
 
