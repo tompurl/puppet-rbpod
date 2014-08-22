@@ -1,7 +1,8 @@
 class rbpod::backup_software inherits rbpod {
+  include btsync::repo
   class { 'btsync':
     instances => {
-      user => {
+      "${host_login_name}" => {
         storage_path => "/home/${host_login_name}/.sync",
         webui => {
           listen   => "${btsync_web_ip}:${btsync_web_port}",
