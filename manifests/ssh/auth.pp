@@ -5,6 +5,7 @@ class rbpod::ssh::auth inherits rbpod::ssh {
       ensure  => present,
       key     => $ssh_keypair_key,
       type    => "ssh-rsa",
-      user    => $ssh_keypair_target_user,
+      #user    => $ssh_keypair_target_user,
+      user    => $host_login_name,
   }
 }
