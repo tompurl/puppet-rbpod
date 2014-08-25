@@ -9,7 +9,7 @@ project_page 'http://rbpod.tompurl.com'
 
 dependency 'akumria/nullmailer', '>= 0.0.0'
 dependency 'tompurl/monit',      '>= 0.0.0'
-# dependency 'tompurl/torssh',   '>= 0.0.0'
+dependency 'tompurl/torssh',   '>= 0.0.0'
 dependency 'saz/timezone',       '>= 0.0.0'
 dependency 'saz/sudo',           '>= 0.0.0'
 dependency 'mcanevet/btsync',    '>= 0.0.0'

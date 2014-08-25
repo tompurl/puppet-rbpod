@@ -16,13 +16,6 @@ Download the module and put it in your "modules" folder:
 
     $ git clone tom@git@github.com:tompurl/puppet-rbpod.git
 
-Please note that you will also need to install the following Puppet module
-manually:
-
-* ``https://github.com/tompurl/puppet-torssh
-
-Due to an issue with the Puppetforge web site I'm not able to add this module.
-
 Add this to your manifest:
 
     class { 'rbpod' :
