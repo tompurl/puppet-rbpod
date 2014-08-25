@@ -3,7 +3,6 @@ class rbpod ($smtp_host =  '',
              $smtp_user_name = '',
              $smtp_password = '',
              $smtp_port = '',
-             $email_hostname = '',
              $monit_web_user_name = '',
              $monit_web_password = '',
              $ssh_port = '9000',
@@ -11,15 +10,14 @@ class rbpod ($smtp_host =  '',
              $timezone = '',
              $ssh_keypair_name = '',
              $ssh_keypair_key = '',
-             $ssh_keypair_target_user = '',
+             #$ssh_keypair_target_user = '',
              $host_login_name = '',
              $btsync_web_ip = '0.0.0.0',
              $btsync_web_port = '8888',
              $btsync_web_login = 'admin',
-             $btsync_web_password = 'password',
+             $btsync_web_password = '',
              # This breaks a Vagrant VM if it's true 
-             $harden_sudo = 'true',
-             $rbpod_hostname = ''){
+             $harden_sudo = 'true'){
 
     Exec { path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ] }
 
