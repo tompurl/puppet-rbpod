@@ -12,9 +12,11 @@ You can start with one of the following:
 * A VPS system somewhere
 * Anything really running Debian and not much else.
 
-Download the module and put it in your "modules" folder:
+Next you need to download the module and put it in your "modules" folder. You
+can download the [package from the Puppet Forge](https://forge.puppetlabs.com/tompurl/rbpod) 
+or clone the git repository like so:
 
-    $ git clone tom@git@github.com:tompurl/puppet-rbpod.git
+    $ git clone https://github.com/tompurl/puppet-rbpod.git rbpod
 
 Add this to your manifest:
 
