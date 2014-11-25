@@ -33,7 +33,6 @@ Add this to your manifest:
       ssh_port                => 22,
       ssh_keypair_name        => "Something for you",
       ssh_keypair_key         => "somethingVeryCleversomethingVeryCleversomethingVeryCleversomethingVeryClever==",
-      ssh_keypair_target_user => "pi",
       host_login_name         => "pi",
       btsync_web_ip           => "0.0.0.0",
       btsync_web_port         => "8888",
