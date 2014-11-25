@@ -1,5 +1,5 @@
 name    'tompurl-rbpod'
-version '0.1.2'
+version '0.1.3'
 source 'https://github.com/tompurl/puppet-rbpod'
 author 'tompurl'
 license 'Apache License, Version 2.0'
